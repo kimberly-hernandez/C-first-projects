@@ -1,0 +1,38 @@
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    
+    double savingsAmount, growth; 
+    char choice;
+    
+    
+    
+    cout << "Hello, thanks for your interest with Ally bank. Please enter the amount of money you would like to deposit so we can determine if you qualify for a high yield savings account. $";
+    cin >> savingsAmount;
+    
+    growth = savingsAmount *pow((1+1.7/100),1);	
+    
+    if (savingsAmount != 0 && savingsAmount >= 500)  {
+    
+    cout << "\nCongratulations! You qualify for a high yield savings account with Ally Bank." << " Would you like to know how much money you can expect to have in your account after 1 year? (y/n):";
+    cin >> choice;
+    
+    if (choice == 'y')
+
+    cout << "\nYour savings account has a 1.7% interest rate. if you deposit $" << fixed << setprecision(2) << savingsAmount << ", in a year, your account will grow to $" << growth << ". \n\nWow! That means you made $" 
+     << growth - savingsAmount << " after just 1 year, all because you chose to bank with Ally! Thanks for your business!";  
+    
+    else
+    
+    cout << "Thanks for banking with Ally. Have a nice day!"; }
+    
+    else
+    
+    cout << "Sorry, you do not qualify for a high yields savings account with Ally Bank.";
+
+    
+
+} 
